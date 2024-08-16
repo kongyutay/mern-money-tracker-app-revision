@@ -3,22 +3,29 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>$0<span>00</span></h1>
+      <form action="">
+        <div className='basic'>
+          <div><input type="text" placeholder='+200 new TV'/></div>
+          <div><input type="datetime-local" /></div>
+        </div>
+        <div className='description'><input type="text" placeholder='Description'/></div>
+        <button type='submit'>Add new transaction</button>
+      </form>
+      <div className="transactions">
+        <div className="transaction">
+          <div className="left">
+            <div className="name"></div>
+            <div className="description"></div>
+          </div>
+          <div className="right">
+            <div className="price"></div>
+            <div className="datetime"></div>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
 
