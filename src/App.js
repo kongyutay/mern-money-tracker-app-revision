@@ -16,12 +16,16 @@ function App() {
       <div className="transactions">
         <div className="transaction">
           <div className="left">
-            <div className="name"></div>
-            <div className="description"></div>
+            <div className="name">transaction.name</div>
+            <div className="description">transaction.description</div>
           </div>
           <div className="right">
-            <div className="price"></div>
-            <div className="datetime"></div>
+            <div
+              className="price red"
+            >
+              transaction.price
+            </div>
+            <div className="datetime">transaction.datetime</div>
           </div>
         </div>
       </div>
