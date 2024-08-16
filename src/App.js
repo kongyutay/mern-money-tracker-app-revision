@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
 
   function addNewTransaction(ev) {
     ev.preventDefault();
-    const url = process.env.REACT_APP_API_URL + '/transaction';
+    const url = 'http://localhost:4040/api/transaction';
     fetch(url, {
       method: 'POST',
       headers: {
