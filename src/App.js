@@ -5,6 +5,17 @@ function App() {
   const [name, setName] = useState('');
   const [datetime, setDatetime] = useState('');
   const [description, setDescription] = useState('')
+  const [transactions, setTransactions] = useState([]);
+
+  useEffect(() => {
+    getTransactions().then(setTransactions);
+  }, [])
+
+  async function getTransactions() {
+    const url = 'http://localhost:4040/api/transactions';
+    const response = await fetch(url)
+    return await response.json()
+  }
 
   function addNewTransaction(ev) {
     ev.preventDefault();
@@ -43,6 +54,7 @@ function App() {
         <button type='submit'>Add new transaction</button>
       </form>
       <div className="transactions">
+        {}
         <div className="transaction">
           <div className="left">
             <div className="name">transaction.name</div>
