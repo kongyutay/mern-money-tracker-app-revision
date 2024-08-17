@@ -9,13 +9,15 @@ function App() {
   function addNewTransaction(ev) {
     ev.preventDefault();
     const url = 'http://localhost:4040/api/transaction';
+    const price = name.split(' ')[0]
     fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name,
+        name: name.substring(price.length + 1),
+        price,
         description,
         datetime
       })
